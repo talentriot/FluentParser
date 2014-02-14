@@ -33,7 +33,7 @@ namespace CraigslistParser
             var hasImage = image != null;
             var imageUrl = hasImage ? image.GetAttributeValue("src", null) : null;
             var plSection = htmlListing.QuerySelector("span.pl");
-            var dateString = plSection.QuerySelector(".date").InnerText;;
+            var dateString = plSection.QuerySelector(".date").InnerText;
             var dayComponent = dateString.Split(' ')[1];
             var monthComponent = dateString.Split(' ')[0];
             var year = DateTime.Now.Year;
