@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceParser", "DiceParser\DiceParser.csproj", "{26BB0F0E-8F1F-436F-BF37-4368F8A9A878}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceParserSpecs", "DiceParserSpecs\DiceParserSpecs.csproj", "{D6F69E9D-CA04-46AE-ACCF-88B8E9FB19EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentParser", "..\..\FluentParser\FluentParser\FluentParser.csproj", "{10DFC011-CABD-45CC-ADE4-069130051973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{26BB0F0E-8F1F-436F-BF37-4368F8A9A878}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26BB0F0E-8F1F-436F-BF37-4368F8A9A878}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26BB0F0E-8F1F-436F-BF37-4368F8A9A878}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26BB0F0E-8F1F-436F-BF37-4368F8A9A878}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F69E9D-CA04-46AE-ACCF-88B8E9FB19EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F69E9D-CA04-46AE-ACCF-88B8E9FB19EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F69E9D-CA04-46AE-ACCF-88B8E9FB19EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F69E9D-CA04-46AE-ACCF-88B8E9FB19EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
