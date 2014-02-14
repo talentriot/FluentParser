@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentParser", "FluentParser\FluentParser.csproj", "{10DFC011-CABD-45CC-ADE4-069130051973}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentParserSpecs", "FluentParserSpecs\FluentParserSpecs.csproj", "{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SiteParsers", "SiteParsers", "{010722AF-47C2-43BD-938D-3396AB48B5A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CraigslistParser", "CraigslistParser\CraigslistParser.csproj", "{6E71E620-EEDD-483A-950C-C2CCB42166E7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DFC011-CABD-45CC-ADE4-069130051973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6E71E620-EEDD-483A-950C-C2CCB42166E7} = {010722AF-47C2-43BD-938D-3396AB48B5A2}
+	EndGlobalSection
+EndGlobal
