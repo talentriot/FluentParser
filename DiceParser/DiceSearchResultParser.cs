@@ -23,7 +23,7 @@ namespace DiceParser
             };
         }
 
-        private int? GetZipcodeSearched(HtmlNode documentRoot, Dictionary<string, List<int>> idsDictionary)
+        private static int? GetZipcodeSearched(HtmlNode documentRoot, Dictionary<string, List<int>> idsDictionary)
         {
             if (!idsDictionary.ContainsKey("Zipcode"))
             {
@@ -53,7 +53,7 @@ namespace DiceParser
         private static int GetTotalSearchResults(HtmlNode documentRoot)
         {
             var searchResults = documentRoot.QueryFromSelectorChain("#searchResHD", "h2").InnerText;
-            var splitString = new string[] {"of"};
+            var splitString = new[] {"of"};
             var splitSearchResults = searchResults.Split(splitString, StringSplitOptions.None);
             var totalSearchResults = Convert.ToInt16(splitSearchResults[1]);
             return totalSearchResults;
