@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}</ProjectGuid>
+    <ProjectGuid>{CC0EC5B0-E474-481B-89BC-D5B762C0BECB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FluentParserSpecs</RootNamespace>
-    <AssemblyName>FluentParserSpecs</AssemblyName>
+    <RootNamespace>DiceParser</RootNamespace>
+    <AssemblyName>DiceParser</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,9 +43,6 @@
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\HtmlAgilityPack.1.4.6\lib\Net45\HtmlAgilityPack.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,43 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CraigsListParserSpecs.cs" />
-    <Compile Include="DiceListingPageParserSpec.cs" />
-    <Compile Include="ParserTestExtensions.cs" />
+    <Compile Include="DiceListing.cs" />
+    <Compile Include="DiceListingPageParser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CraigslistParser\CraigslistParser.csproj">
-      <Project>{6E71E620-EEDD-483A-950C-C2CCB42166E7}</Project>
-      <Name>CraigslistParser</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DiceParser\DiceParser.csproj">
-      <Project>{cc0ec5b0-e474-481b-89bc-d5b762c0becb}</Project>
-      <Name>DiceParser</Name>
-    </ProjectReference>
     <ProjectReference Include="..\FluentParser\FluentParser.csproj">
-      <Project>{10DFC011-CABD-45CC-ADE4-069130051973}</Project>
+      <Project>{10dfc011-cabd-45cc-ade4-069130051973}</Project>
       <Name>FluentParser</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Pages\CraigslistItemPageNoMap.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Pages\CraigslistItemPageWithMap.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Pages\CraigslistListingPage.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Pages\DiceListingPage.html">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
