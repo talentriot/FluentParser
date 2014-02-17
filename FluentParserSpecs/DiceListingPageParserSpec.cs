@@ -30,7 +30,7 @@ namespace FluentParserSpecs
 
         private int GetExpectedNumberOfListings(HtmlDocument htmlDocument)
         {
-            return 30;
+            return 28;
         }
 
     }
