@@ -58,6 +58,7 @@
     <Compile Include="DiceListingPageParserSpec.cs" />
     <Compile Include="ParserTestExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TRWebClientSpecs.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -76,6 +77,10 @@
     <ProjectReference Include="..\FluentParser\FluentParser.csproj">
       <Project>{10DFC011-CABD-45CC-ADE4-069130051973}</Project>
       <Name>FluentParser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TR.HttpUtilities\TR.HttpUtilities.csproj">
+      <Project>{7224c099-813d-4d1c-9e28-62e65a47ab49}</Project>
+      <Name>TR.HttpUtilities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

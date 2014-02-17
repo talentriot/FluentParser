@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SiteParsers", "SiteParsers"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CraigslistParser", "CraigslistParser\CraigslistParser.csproj", "{6E71E620-EEDD-483A-950C-C2CCB42166E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.HttpUtilities", "TR.HttpUtilities\TR.HttpUtilities.csproj", "{7224C099-813D-4D1C-9E28-62E65A47AB49}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceParser", "DiceParser\DiceParser.csproj", "{CC0EC5B0-E474-481B-89BC-D5B762C0BECB}"
 EndProject
 Global
@@ -31,6 +33,10 @@ Global
 		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E71E620-EEDD-483A-950C-C2CCB42166E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CC0EC5B0-E474-481B-89BC-D5B762C0BECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CC0EC5B0-E474-481B-89BC-D5B762C0BECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC0EC5B0-E474-481B-89BC-D5B762C0BECB}.Release|Any CPU.ActiveCfg = Release|Any CPU

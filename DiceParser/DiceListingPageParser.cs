@@ -31,7 +31,6 @@ namespace DiceParser
 
             var companyNameNode = linkNodes.Where(n => n.Attributes.Where(attr => attr.Name == "title").Any()).Single();
 
-            var companyNameNode = htmlListing.QuerySelector("a");
             var listing = new DiceListing()
             {
                 JobTitle = jobTitle,
