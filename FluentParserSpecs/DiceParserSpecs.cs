@@ -12,6 +12,8 @@ namespace FluentParserSpecs
     public class DiceParserSpecs
     {
         public static readonly string DiceSearchResultsPage = "./Pages/DiceSearchResultPage.html";
+        public static readonly string DiceStandardItemPage = "./Pages/DiceStandardItemPage.html";
+        public static readonly string DiceServletItemPage = "./Pages/DiceServletItemPage.html";
 
         [Test]
         public void _001_We_Should_Parse_The_Correct_Number_of_Results_From_A_Search_Page()
@@ -38,6 +40,20 @@ namespace FluentParserSpecs
             {
                 AssertHasExpectedValues(diceSearchResult);
             }
+        }
+
+        [Test]
+        public void _010_We_should_Parse_A_Standard_dice_Item_Page()
+        {
+            var standardItemPageSource = DiceStandardItemPage.ReadHtmlFromFile();
+            throw new NotImplementedException();
+        }
+
+        [Test]
+        public void _012_We_should_Parse_A_Dice_Servlet_Item_Page()
+        {
+            var servletItemPageSource = DiceServletItemPage.ReadHtmlFromFile();
+            throw new NotImplementedException();
         }
 
         private void AssertHasExpectedValues(DiceSearchResult diceSearchResult)
