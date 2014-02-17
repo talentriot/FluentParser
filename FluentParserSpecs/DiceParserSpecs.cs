@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+using DiceParser;
 using NUnit.Framework;
 
 namespace FluentParserSpecs
@@ -11,8 +13,13 @@ namespace FluentParserSpecs
         [Test]
         public void _001_We_Should_Be_Able_To_Parse_A_Search_Results_Page()
         {
-            var htmlDocument = DiceSearchResultsPage.ReadHtmlFromFile();
-            throw new NotImplementedException();
+            var searchPageSource = DiceSearchResultsPage.ReadHtmlFromFile();
+
+            var parser = new DiceSearchPageParser();
+            var parsedListings = parser.GetAllFor(searchPageSource);
+
+            var expectedNumberOfListings = 30;
+            Assert.AreEqual(expectedNumberOfListings, parsedListings.Count());
         }
     }
 }

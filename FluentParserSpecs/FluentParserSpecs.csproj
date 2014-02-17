@@ -68,6 +68,10 @@
       <Project>{6E71E620-EEDD-483A-950C-C2CCB42166E7}</Project>
       <Name>CraigslistParser</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DiceParser\DiceParser.csproj">
+      <Project>{4FFBB3B2-9FF4-4B27-87F5-566C30C621E6}</Project>
+      <Name>DiceParser</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FluentParser\FluentParser.csproj">
       <Project>{10DFC011-CABD-45CC-ADE4-069130051973}</Project>
       <Name>FluentParser</Name>
