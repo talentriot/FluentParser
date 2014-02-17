@@ -9,8 +9,10 @@ using HtmlAgilityPack;
 
 namespace DiceParser
 {
-    public class DiceListingPageParser 
+    public class DiceListingPageParser
     {
+        private static readonly int LocationColumn = 2;
+        private static readonly int DatePostedColumn = 3;
 
         public IEnumerable<DiceListing> GetAllListingsFor(HtmlDocument htmlDocument)
         {
@@ -35,10 +37,11 @@ namespace DiceParser
             var companyName = companyNameNode.InnerText;
             var companyUrl = GetHrefAttributeFromNode(companyNameNode).Value;
 
-            var locationNode = htmlListing.QuerySelectorAll("td").ElementAt(2);
-            var location = locationNode.InnerText;
+            var locationNode = htmlListing.QuerySelectorAll("td").ElementAt(LocationColumn);
+            var location = locationNode.InnerText.Replace('\r', ' ').Trim();
+            var locationUrl = GetUrlFromTd(locationNode);
 
-            var datePostedNode = htmlListing.QuerySelectorAll("td").ElementAt(3);
+            var datePostedNode = htmlListing.QuerySelectorAll("td").ElementAt(DatePostedColumn);
 
             var listing = new DiceListing()
             {
@@ -47,10 +50,16 @@ namespace DiceParser
                 CompanyName = companyName,
                 CompanyNameUrl = companyUrl,
                 Location = location,
-                LocationUrl = "",
+                LocationUrl = locationUrl,
                 DatePosted = DateTime.Parse(datePostedNode.InnerText)
             };
             return listing;
+        }
+
+        private static string GetUrlFromTd(HtmlNode node)
+        {
+            var ancorNode = node.QuerySelector("a");
+            return ancorNode != null ? GetHrefAttributeFromNode(ancorNode).Value : "";
         }
 
         private static HtmlAttribute GetHrefAttributeFromNode(HtmlNode ancorNode)
