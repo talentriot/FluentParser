@@ -14,7 +14,7 @@ namespace FluentParserSpecs
         public static readonly string DiceSearchResultsPage = "./Pages/DiceSearchResultPage.html";
 
         [Test]
-        public void _001_We_Should_Be_Able_To_Parse_A_Search_Results_Page()
+        public void _001_We_Should_Parse_The_Correct_Number_of_Results_From_A_Search_Page()
         {
             var searchPageSource = DiceSearchResultsPage.ReadHtmlFromFile();
 
@@ -24,6 +24,29 @@ namespace FluentParserSpecs
             var parsedListings = parser.GetAllFor(searchPageSource);
 
             Assert.AreEqual(expectedNumberOfListings, parsedListings.Count());
+        }
+
+        [Test]
+        public void _002_Each_Search_Result_Row_Should_Parse_Correctly()
+        {
+            var searchPageSource = DiceSearchResultsPage.ReadHtmlFromFile();
+
+            var parser = new DiceSearchPageParser();
+            var parsedListings = parser.GetAllFor(searchPageSource);
+
+            foreach (var diceSearchResult in parsedListings)
+            {
+                AssertHasExpectedValues(diceSearchResult);
+            }
+        }
+
+        private void AssertHasExpectedValues(DiceSearchResult diceSearchResult)
+        {
+            Assert.IsNotNullOrEmpty(diceSearchResult.Title);
+            Assert.IsNotNullOrEmpty(diceSearchResult.CompanyName);
+            Assert.IsNotNullOrEmpty(diceSearchResult.Location);
+            Assert.IsNotNull(diceSearchResult.PostingDate);
+            Assert.IsNotNullOrEmpty(diceSearchResult.ItemPageUrl);
         }
 
         private int GetExpectedSearchResultCount(HtmlDocument searchPageSource)
