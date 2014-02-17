@@ -38,25 +38,33 @@ namespace FluentParserSpecs
 
             foreach (var diceSearchResult in parsedListings)
             {
-                AssertHasExpectedValues(diceSearchResult);
+                AssertSearchResultHasExpectedValues(diceSearchResult);
             }
         }
 
         [Test]
         public void _010_We_should_Parse_A_Standard_dice_Item_Page()
         {
+            var parser = new DiceItemPageParser();
+
             var standardItemPageSource = DiceStandardItemPage.ReadHtmlFromFile();
-            throw new NotImplementedException();
+            var jobListing = parser.ParseItemFromPage(standardItemPageSource);
+
+            AssertJobListingHasExpectedValues(jobListing);
         }
 
         [Test]
         public void _012_We_should_Parse_A_Dice_Servlet_Item_Page()
         {
+            var parser = new DiceItemPageParser();
+
             var servletItemPageSource = DiceServletItemPage.ReadHtmlFromFile();
-            throw new NotImplementedException();
+            var jobListing = parser.ParseItemFromPage(servletItemPageSource);
+
+            AssertJobListingHasExpectedValues(jobListing);
         }
 
-        private void AssertHasExpectedValues(DiceSearchResult diceSearchResult)
+        private static void AssertSearchResultHasExpectedValues(DiceSearchResult diceSearchResult)
         {
             Assert.IsNotNullOrEmpty(diceSearchResult.Title);
             Assert.IsNotNullOrEmpty(diceSearchResult.CompanyName);
@@ -65,7 +73,24 @@ namespace FluentParserSpecs
             Assert.IsNotNullOrEmpty(diceSearchResult.ItemPageUrl);
         }
 
-        private int GetExpectedSearchResultCount(HtmlDocument searchPageSource)
+        private static void AssertJobListingHasExpectedValues(DiceJobListing jobListing)
+        {
+            Assert.IsNotNullOrEmpty(jobListing.Title);
+            Assert.IsNotNullOrEmpty(jobListing.PageUrl);
+            Assert.IsNotNull(jobListing.PostedDate);
+            Assert.IsNotNullOrEmpty(jobListing.Industry);
+            Assert.IsNotNullOrEmpty(jobListing.Description);
+            Assert.IsNotNullOrEmpty(jobListing.ImageUrl);
+            Assert.IsNotNullOrEmpty(jobListing.Skills);
+            Assert.IsNotNullOrEmpty(jobListing.BaseSalary);
+            Assert.IsNotNullOrEmpty(jobListing.EmploymentType);
+            Assert.IsNotNullOrEmpty(jobListing.LocationCity);
+            Assert.IsNotNullOrEmpty(jobListing.LocationState);
+            Assert.IsNotNullOrEmpty(jobListing.HiringOrganizationName);
+            Assert.IsNotNullOrEmpty(jobListing.HiringOrganizationUrl);
+        }
+
+        private static int GetExpectedSearchResultCount(HtmlDocument searchPageSource)
         {
             var searchResultsSection = searchPageSource.DocumentNode.QueryFromSelectorChain("#searchResHD", "h2");
             var searchResultsTest = searchResultsSection.InnerText;

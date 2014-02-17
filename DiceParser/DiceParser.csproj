@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DiceItemPageParser.cs" />
+    <Compile Include="DiceJobListing.cs" />
     <Compile Include="DiceSearchPageParser.cs" />
     <Compile Include="DiceSearchResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
