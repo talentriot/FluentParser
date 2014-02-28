@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentParser", "FluentParser\FluentParser.csproj", "{10DFC011-CABD-45CC-ADE4-069130051973}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentParserSpecs", "FluentParserSpecs\FluentParserSpecs.csproj", "{268CFE6C-4AAB-48A8-AF8C-6BD724AAC415}"
@@ -12,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CraigslistParser", "CraigslistParser\CraigslistParser.csproj", "{6E71E620-EEDD-483A-950C-C2CCB42166E7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TR.HttpUtilities", "TR.HttpUtilities\TR.HttpUtilities.csproj", "{7224C099-813D-4D1C-9E28-62E65A47AB49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiceParser", "DiceParser\DiceParser.csproj", "{35386499-14DF-4AB6-AC07-90C881E6D7BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,11 +35,16 @@ Global
 		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7224C099-813D-4D1C-9E28-62E65A47AB49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35386499-14DF-4AB6-AC07-90C881E6D7BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35386499-14DF-4AB6-AC07-90C881E6D7BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35386499-14DF-4AB6-AC07-90C881E6D7BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35386499-14DF-4AB6-AC07-90C881E6D7BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6E71E620-EEDD-483A-950C-C2CCB42166E7} = {010722AF-47C2-43BD-938D-3396AB48B5A2}
+		{35386499-14DF-4AB6-AC07-90C881E6D7BF} = {010722AF-47C2-43BD-938D-3396AB48B5A2}
 	EndGlobalSection
 EndGlobal
